@@ -1,0 +1,13 @@
+.env
+.venv/
+venv/
+__pycache__/
+.DS_Store
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.coverage
+data/*.jsonl
+!data/.gitkeep
+.cache/
+.huggingface/
