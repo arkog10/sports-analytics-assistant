@@ -21,6 +21,8 @@ This project ingests sports articles from public RSS feeds, stores embeddings in
 
 - Launch a Qdrant cluster in the cloud console, then set `QDRANT_URL` and `QDRANT_API_KEY` in your `.env` file accordingly.
 
+- Ensure a local data directory exists for scraped JSONL (ignored by git): `mkdir -p data`. The ingest code also creates parent directories as needed.
+
 - Load data into the index (scrape RSS, embed, upsert) using either:
   - `python scripts/ingest_qdrant.py --rescrape`, or
   - `POST /ingest` on the API with `{"rescrape": true}` after the server is up.

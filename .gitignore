@@ -8,6 +8,5 @@ __pycache__/
 .mypy_cache/
 .coverage
 data/*.jsonl
-!data/.gitkeep
 .cache/
 .huggingface/

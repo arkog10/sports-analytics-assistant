@@ -53,6 +53,7 @@ def ingest_jsonl_to_qdrant(
 def full_ingest(*, rescrape: bool, settings: Settings | None = None) -> tuple[int, str]:
     s = settings or get_settings()
     p = s.jsonl_path()
+    p.parent.mkdir(parents=True, exist_ok=True)
     n_scraped = 0
     if rescrape:
         n_scraped = run_scrapers_to_jsonl(p)
